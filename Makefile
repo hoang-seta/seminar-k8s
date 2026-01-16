@@ -1,8 +1,8 @@
 build:
-	docker build -t hoanghs120/seminar .
+	docker build -t hoanghs120/seminar:v2 .
 
 push:
-	docker push hoanghs120/seminar:v1
+	docker push hoanghs120/seminar:v2
 
 deploy:
 	kubectl apply -f deployment/deployment.yaml

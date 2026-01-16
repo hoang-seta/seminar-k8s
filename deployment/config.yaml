@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: seminar
+  name: app-config
+data:
+  KEY_FROM_OS: abc

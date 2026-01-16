@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: seminar
-          image: hoanghs120/seminar:v1
+          image: hoanghs120/seminar:v4
           resources:
             requests:
               cpu: "100m"
@@ -45,3 +45,10 @@ spec:
               port: 8080
             periodSeconds: 20
             timeoutSeconds: 2
+          # env from secret
+          env:
+            - name: KEY_FROM_OS
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: KEY_FROM_OS
